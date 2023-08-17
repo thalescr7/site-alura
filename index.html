@@ -1,90 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="reset.css">
-  <title>Documentario sobre os cavalos</title>
-  <link rel="stylesheet" href="index.css">
+	<meta charset="UTF-8">
+	<title>Contato das vendas de recursos de cavalos</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
-
-
-
 <body>
-  <header>
-    <img src="cavalo 1.jfif">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="produtos.html">Produtos</a></li>
-    <li><a href="contato.html">Contato</a></li>
+	<header>
+		<div class="caixa">
+			<h1><img src="cavalo sor.jpg" alt=""></h1>
 
-    </ul>
-  </header>
-  <div class="principal">
-    <h2 class="titulo-centralizado"><ins>Sobre os cavalos</ins></h2>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="produtos.html">Produtos</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-    <p>Oque os cavalos se alimentam: eles se alimentam de feno, raizes, sal, silagem etc.
-      Cavalos tem bons ouvidos e escutam muito bem. São capazes de reconhecer
-      sons e vozes familiares a longas distâncias. <br>
+	<main>
+		<form>
+			<p><label for="nomesobrenome">Nome e sobrenome</label></p>
+			<p><input type="text" id="nomesobrenome" class="input-padrao" required></p>
 
-      Os cavalos são animais mamíferos, logo, possuem seu corpo repleto de pelos. Os pelos desses animais variam
-      muito, sendo possível observar indivíduos com pelos de tonalidade marrom-claro, marrom-escuro, preto, branco
-      e com manchas.</p>
-  </div>
+			<p><label for="email">Email</label></p>
+			<p><input type="email" id="email" class="input-padrao" required placeholder="jose.19.10@gmail.com"></p>
 
-  <div class="beneficios">
-    <h3 class="titulo-centralizado"><ins>beneficios</ins></h3>
+			<p><label for="telefone">Telefone</label></p>
+			<p><input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX"></p>
 
-    <ul>
-      <li>Reduz o estresse</li>
-      <li>Aproximasse da natureza</li>
-      <li>permanecer fisicamente ativo</li>
-      <li>desenvolve autoconfiança</li>
-    </ul>
+			<p><label for="mensagem">Mensagem</label></p>
+			<p><textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea></p>
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116135.48896640269!2d-54.12421571199439!3d-24.546573508772905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f381b91613f03d%3A0x4213e24bcab14e34!2sRancho%204J!5e0!3m2!1spt-BR!2sbr!4v1692152370566!5m2!1spt-BR!2sbr"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<fieldset>
+				<legend>Como prefere a entrega do cavalo?</legend>
+				<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">
+					Correios</label>
 
-    <p><br> são animais herbívoros, porém não são ruminantes como as vacas, possuindo apenas um estômago (monogástrico).
-      Outra diferença entra a vaca e o cavalo é que enquanto a primeira possui couro, o segundo possui uma pele rica em
-      receptores de sensibilidade e por isso conseguem sentir o leve pousar de uma mosca que como reação irá promover
-      movimentações na pele. A pastagem é feita por livre escolha, e nota-se uma preferência por certos vegetais. Essa
-      livre escolha sofre a influência de diversos fatores como: demanda nutricional, compostos tóxicos nas plantas,
-      disponibilidade de forragem, interação social e risco dos predadores. A média do peso de um cavalo varia de 350 a
-      500.</p>
+				<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">
+					Ele vim andando</label>
 
-    <p><br> principais características destes animais são: vivem entre 25-40 anos de idade, os machos, geralmente
-      apresentam a proporção de altura e comprimento iguais, enquanto as fêmeas são ligeiramente mais compridas do que
-      altas. O olfato de um equino é mais apurado do que de um cachorro. A pelagem pode variar desde branco, amarelo,
-      marrom e preto, sendo algumas raças conhecidas pelas misturas de cores e manchas.</p>
-    <br>
-    <p>video de algumas curiosidades sobre os cavalos</p>
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/CXQqxuPcopw" title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
+				<label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"
+						checked> ou vim vuando</label>
+			</fieldset>
 
-    <br>
+			<fieldset>
 
-    <select class="form-select" aria-label="Default select example">
-      <option selected>voce gostou desse video?</option>
-      <option value="1">Sim</option>
-      <option value="2">não</option>
-      <option value="3">É</option>
-      <br>
+			</fieldset>
 
-  </div>
-  </select>
-  </div>
-  <footer>
+			<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por
+				email?</label>
 
+			<input type="submit" value="Enviar formulário">
+		</form>
+	</main>
 
-    <p><ins>autoria de thales</ins></p>
-    <img src="" alt="">
-  </footer>
+	<footer>
+		<p class="copyright">&copy;Thales-Cavalos</p>
+	</footer>
 </body>
 
 </html>
